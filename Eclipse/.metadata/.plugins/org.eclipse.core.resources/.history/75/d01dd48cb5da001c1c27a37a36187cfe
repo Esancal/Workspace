@@ -1,0 +1,98 @@
+package com.generation;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//Variables
+		//Se define el tipo de dato al cual pertenecera la variable
+		//Tipo de dato nombre_variable = asignacion;
+		String nombre = "Esteban";
+		System.out.println(nombre);
+		
+		//16 bits (un solo caracter, entre comillas simples ' ')
+		char letraA = 'a';
+		
+	
+		
+		//Variables numericas
+		//32 bits
+		int numeroInt = 24;
+		System.out.println(numeroInt + 10);
+		
+		//8 bits
+		byte numeroByte = 100;
+		System.out.println(numeroByte);
+		
+		//16 bits
+		short numeroShort = 234;
+		System.out.println(numeroShort);
+		
+		//64 bits
+		long numeroLong = 1234567890;
+		System.out.println(numeroLong);
+		
+		//float y double (aceptan decimales)
+		
+		//variable booleana (true or false)
+		boolean acepta = true; //false
+		
+		
+		char genero = 'M';
+		String cabello = "Castaño";
+		boolean compro = true;
+
+		System.out.println("Su genero es: "+genero+"\nSu cabello es de color: "+cabello);
+		if(compro) {
+			System.out.println("Su compromiso es real");
+		}
+		
+
+		String poblacion = "Bello horizonte";
+		byte edad = 22;
+		String ocupacion = "Estudiante";
+		
+		System.out.println("\nSu poblacion es: "+poblacion+"\nSu edad es: "+edad+"\nSu nombre es: "+nombre+"\nSu ocupacion es: "+ ocupacion+ "\nSu genero es: "+genero);
+		
+		//Variables de tipo objeto
+		System.out.println(nombre.charAt(1)); // Entrega la segunda letra del "nombre" (E->s<-teban) 
+		
+		
+		//Los strings se comparan con equals
+		String curso = "G1";
+		
+		if(curso.equals("g1")) {
+			System.out.println("Iguales");
+		}
+		else{
+			System.out.println("Distintos");
+		}
+		
+		if(curso.equalsIgnoreCase("g1")) {
+			System.out.println("Iguales");
+		}
+		else{
+			System.out.println("Distintos");
+		}
+		
+		if(curso.toLowerCase().equals("g1")) {
+			System.out.println("Iguales");
+		}
+		if(curso.equals("g1".toUpperCase())) {
+			System.out.println("Iguales");
+		}
+		
+		String curso2 = ""; 	//Variable vacia
+		String curso3 = null; 		//null, solo creada
+		
+		//para comparar null se recomienda usar el null primero
+		if(null == curso3) {
+			
+		}
+		
+		//float y double
+		
+		float altura = 1.79; //1.79f
+		Float peso = 63.5;
+	}
+
+}

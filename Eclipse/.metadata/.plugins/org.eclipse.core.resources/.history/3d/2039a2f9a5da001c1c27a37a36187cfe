@@ -1,0 +1,18 @@
+package com.generation;
+
+
+public static void main(String[] args) {
+    //Variables
+    //Se define el tipo de dato al cual pertenecera la variable
+    //Tipo de dato nombre_variable = asignacion;
+    String nombre = "Esteban";
+
+    System.out.print("Prueba numero 1\n"+nombre);
+
+    //Variables numericas
+    int numeroInt = 22;
+    System.out.println(numeroInt);
+    
+}
+
+}

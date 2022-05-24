@@ -1,0 +1,56 @@
+package com.generation;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//Variables
+		//Se define el tipo de dato al cual pertenecera la variable
+		//Tipo de dato nombre_variable = asignacion;
+		String nomb = "Prueba numero\nUwU";
+		System.out.println(nomb);
+		
+		//16 bits (un solo caracter, entre comillas simples ' ')
+		char letraA = 'a';
+		
+	
+		
+		//Variables numericas
+		//32 bits
+		int numeroInt = 24;
+		System.out.println(numeroInt + 10);
+		
+		//8 bits
+		byte numeroByte = 100;
+		System.out.println(numeroByte);
+		
+		//16 bits
+		short numeroShort = 234;
+		System.out.println(numeroShort);
+		
+		//64 bits
+		long numeroLong = 1234567890;
+		System.out.println(numeroLong);
+		
+		//float y double
+		
+		//variable booleana (true or false)
+		boolean acepta = true; //false
+		
+		
+		char genero = 'M';
+		String cabello = "Castaño";
+		boolean compro = true;
+		
+		//System.out.println("Su genero es: "+genero+"\nSu cabello es de color: "+cabello+"\n S");
+		
+
+		String poblacion = "Bello horizonte";
+		byte edad = 22;
+		String nombre = "Esteban";
+		String ocupacion = "Estudiante";
+		
+		System.out.println("Su poblacion es: "+poblacion+"\nSu edad es: "+edad+"\nSu nombre es: "+nombre+"\nSu ocupacion es: "+ ocupacion+ "\nSu genero es: "+genero);
+
+	}
+
+}

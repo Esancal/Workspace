@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<script>
+    //Escribe una función que entregue la suma de todos los números pares del 1 al 1000
+    //Puedes usar un operador de módulo para este ejercicio.
+
+
+    /*
+        function suma() {
+            let valor1 = 0;
+            for (let i = 1; i <= 1000; i++) {
+                i = i + 1;
+                valor1 = valor1 + i;
+            }
+            return valor1;
+        }
+        console.log(suma());
+    */
+
+
+    function suma2() {
+        let valor2 = 0;
+        for (let a = 0; a <= 1000; a++) {
+            if ((a % 2) == 0) {
+                valor2 = valor2 + a;
+            }
+        }
+        return valor2;
+    }
+    console.log(suma2());
+</script>
+
+<body>
+
+</body>
+
+</html>

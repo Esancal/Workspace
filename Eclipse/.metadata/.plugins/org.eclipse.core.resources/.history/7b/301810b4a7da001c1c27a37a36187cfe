@@ -1,0 +1,32 @@
+package com.generation;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//Variables
+		//Se define el tipo de dato al cual pertenecera la variable
+		//Tipo de dato nombre_variable = asignacion;
+		String nombre = "Prueba numero\nUwU";
+		
+		System.out.println(nombre);
+	
+		
+		//Variables numericas
+		//32 bits
+		int numeroInt = 24;
+		System.out.println(numeroInt + 10);
+		
+		//8 bits
+		byte numeroByte = 100;
+		System.out.println(numeroByte);
+		
+		//16 bits
+		short numeroShort = 234;
+		System.out.println(numeroShort);
+		
+		//64 bits
+		long numeroLong = 123456789014;
+		System.out.println(numeroLong);
+	}
+
+}
