@@ -1,0 +1,22 @@
+package com.generation.f20220525;
+
+import java.util.Scanner;
+
+public class BucleWhile {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+  		
+
+  		System.out.println("Ingrese la opcion (1) Entrar: ; (0) Salir");
+  		int opcion = Integer.parseInt(sc.nextLine()); //capturando el ingreso de datos
+  		
+  		//While valida que la condicion sea verdadera
+		while(opcion != 1 && opcion != 0) {
+			
+		}
+		
+		
+		
+	}
+}

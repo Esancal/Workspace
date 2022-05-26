@@ -1,0 +1,22 @@
+package com.generation.f20220525;
+
+import java.util.Scanner;
+
+public class Reforzamiento {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+  		int margenSuperior = Integer.parseInt(sc.nextLine()); //Entrada de datos
+  		int margenInferior;
+  		
+  		do{
+  			int margenInferior = Integer.parseInt(sc.nextLine()); 
+  			
+  		}while(margenInferior<margenSuperior);
+
+		
+	}
+
+}

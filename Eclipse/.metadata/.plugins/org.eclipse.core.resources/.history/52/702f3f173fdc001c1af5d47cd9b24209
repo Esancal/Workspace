@@ -1,0 +1,20 @@
+package com.generation.f20220525;
+
+public class CondicionalSwitch {
+
+	public static void main(String[] args) {
+		//Menu
+		System.out.println("Ingrese opcion: ");
+		System.out.println("1 Sumar \n2 Restar \n3 Multiplicar \n4 Dividir");
+		switch (key) {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
+		
+	}
+
+}

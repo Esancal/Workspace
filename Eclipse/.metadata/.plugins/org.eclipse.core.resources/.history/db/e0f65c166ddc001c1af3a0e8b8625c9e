@@ -1,0 +1,52 @@
+package com.generation.f20220525;
+
+import java.util.Scanner;
+
+public class Reforzamiento {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Ingrese el margen Superior: ");
+  		int margenSuperior = Integer.parseInt(sc.nextLine()); //Entrada de datos
+  		int margenInferior;
+  		int numero;
+  		int total=0;
+  		int contador=0;
+  		boolean key = true;
+  		
+  		
+  		do{
+        System.out.println("Ingrese el margen inferior (debe ser menor al margen superior): ");
+        margenInferior = Integer.parseInt(sc.nextLine()); 
+  		if(margenInferior>=margenSuperior) {
+  			System.out.println("Incorrecto, vuelva a ingresar");
+  		}
+  			
+  		}while(margenInferior>=margenSuperior);
+  		
+  		System.out.println("Ingreso de margenes correctos");
+  		
+  		
+  		
+  		
+  		
+  		while(key) {
+  			System.out.println("Ingrese un numero // (0) Salir");
+  			numero = Integer.parseInt(sc.nextLine());
+  			total += numero;
+  			contador++;
+  			
+  			if(numero==0) {
+  				key=false;
+  			}
+  			
+  			
+  		}
+  		
+
+		
+	}
+
+}
