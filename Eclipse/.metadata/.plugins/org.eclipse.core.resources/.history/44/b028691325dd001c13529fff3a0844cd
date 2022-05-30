@@ -1,0 +1,17 @@
+package com.generation.f20220526;
+
+public class ColeccionArray {
+
+	public static void main(String[] args) {
+		// Array 
+		String[] colores = {"Negro", "Cyan", "Azul", "Verde",2 };
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}

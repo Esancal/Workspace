@@ -1,0 +1,56 @@
+package com.generation.f20220527;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class MenuDeComida {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int platoElegido, pureCon, arrozCon;
+		ArrayList<String> arroz = new ArrayList<String>();
+		ArrayList<String> pure = new ArrayList<String>();
+		arroz.add("Chaufá");
+		arroz.add("Pollo Arbejado");
+		pure.add("Pescado");
+		pure.add("Filete");
+		HashMap platos = new HashMap();
+		platos.put("Arroz", arroz);
+		platos.put("Puré", pure);
+		System.out.println("*****************************");
+		System.out.println("**********   Menú   *********");
+		System.out.println("*****************************");
+		System.out.println("******* Elija su plato ******");
+		System.out.println("*****************************");
+		System.out.println(platos);
+		System.out.println("*****************************");
+		System.out.println("******Arroz o Puré 1-2*******");
+		platoElegido = Integer.parseInt(entrada.nextLine());
+		if (platoElegido == 1) {
+			System.out.println(platos.get("Arroz"));
+			System.out.println("Elija su agregado o tipo con 1-2");
+			arrozCon = Integer.parseInt(entrada.nextLine());
+			if (arrozCon == 1) {
+				System.out.println("Usted a elegido arroz: " + arroz.get(0));
+			} else if ((arrozCon == 2)) {
+				System.out.println("Usted a elegido arroz: " + arroz.get(1));
+			} else {
+				System.out.println("Opción inválida, hasta luego");
+			}
+		} else if (platoElegido == 2) {
+			System.out.println(platos.get("Puré"));
+			System.out.println("Elija su agregado o tipo con 1-2");
+			pureCon = Integer.parseInt(entrada.nextLine());
+			if (pureCon == 1) {
+				System.out.println("Usted a elegido puré: " + pure.get(0));
+			} else if ((pureCon == 2)) {
+				System.out.println("Usted a elegido puré: " + pure.get(1));
+			} else {
+				System.out.println("Opción inválida, hasta luego");
+			}
+		} else {
+			System.out.println("Opción inválida, hasta luego");
+		}
+	}
+}

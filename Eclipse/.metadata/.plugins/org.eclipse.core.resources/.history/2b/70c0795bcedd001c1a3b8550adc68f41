@@ -1,0 +1,31 @@
+package com.generation.f20220527;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class MenuDeComida {
+
+	public static void main(String[] args) {
+		
+		HashMap platos = new HashMap();
+		Scanner entrada = new Scanner(System.in);
+		
+		ArrayList<String> Pure = new ArrayList<String>();
+		ArrayList<String> Arroz = new ArrayList<String>();
+
+		Pure.add("Chaufa");
+		Pure.add("Pollo arbejado");
+		Pure.add("Primavera");
+		//Pure.get(0);
+		
+		Arroz.add("Cahufa");
+		Arroz.add("Pollo arbejado");
+		Arroz.add("Primavera");
+		//Arroz.get(0);
+		
+		
+		
+		
+	}
+
+}

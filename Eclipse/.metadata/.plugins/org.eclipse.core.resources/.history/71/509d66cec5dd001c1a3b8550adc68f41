@@ -1,0 +1,26 @@
+package com.generation.f20220527;
+
+import java.util.HashMap;
+
+public class ColeccionesMap {
+
+	public static void main(String[] args) {
+		//Colecciones map
+		//Pares clave <-> valor
+		
+		//HashMap<K, V> map = new HashMap <K,V>)();
+		//K=Key / V= value / 
+		//HashMap mapa = new HashMap(); // Otra manera de escribirlo
+		
+		HashMap objHashMap = new HashMap();
+		
+		objHashMap.put("Nombre", "Esteban");
+		objHashMap.put("ApellidoP", "Castañeda");
+		objHashMap.put("ApellidoM", "Alfaro");
+
+
+		
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.generation.f20220527;
+
+public class Auto {
+
+	//Clase es un modelo o prototipo
+	//Objeto, nace a partir de la clase, caracteristica o atributo,
+	//Tiene metodos o funciones.
+	//Algo concreto lo convertimos en abstracto (No tangible)
+	
+	//QUE ES UN ATRIBUTO DE COLABORACION: TOMAR UN OBJETO Y USARLO COMO ATRIBUTO
+	
+	
+	
+}

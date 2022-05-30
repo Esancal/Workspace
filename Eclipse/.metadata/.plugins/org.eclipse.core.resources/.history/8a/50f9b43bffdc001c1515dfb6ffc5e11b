@@ -1,0 +1,18 @@
+package com.generation.f20220526;
+
+public class Funciones {
+
+	public static void main(String[] args) {
+		
+		//Funciones
+		//4 tipos de funciones
+		//2 que retornan
+		//2 no retornan
+		
+		
+		
+	}
+	//accesador tipoDeRetorno nombreFuncion (parametrosARecibir)
+	public //Cualquier otra clase podra llamar a esta funcion
+
+}

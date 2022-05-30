@@ -1,0 +1,19 @@
+package com.generation.f20220527;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class MenuDeComida {
+
+	public static void main(String[] args) {
+		
+		HashMap Menu = new HashMap();
+		
+		ArrayList<String> Pure = new ArrayList<String>();
+		ArrayList<String> Arroz = new ArrayList<String>();
+
+
+		
+	}
+
+}

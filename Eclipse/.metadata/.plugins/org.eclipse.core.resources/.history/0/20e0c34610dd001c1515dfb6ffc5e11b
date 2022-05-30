@@ -1,0 +1,25 @@
+package com.generation.f20220526;
+
+public class LibreriaMath {
+
+	public static void main(String[] args) {
+
+		//Math
+		
+		//elevar o potencia
+		double numeroElevado = Math.pow(2.5, 3); // pow=elevar // (base, exponente)
+		System.out.println(numeroElevado);
+		
+		//Redondear al entero mayor
+		double enteroMayor = Math.ceil(numeroElevado);
+		System.out.println(enteroMayor);
+		
+		//Redondear al entero menor
+		double enteroMenor = Math.floor(numeroElevado);
+		System.out.println(enteroMenor);
+		
+		double enteroRedondeado = Math.round(numeroElevado);
+		System.out.println(enteroRedondeado);
+	}
+
+}

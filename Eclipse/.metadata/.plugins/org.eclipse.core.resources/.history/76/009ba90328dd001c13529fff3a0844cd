@@ -1,0 +1,33 @@
+package com.generation.f20220526;
+
+public class ColeccionArray {
+
+	public static void main(String[] args) {
+		// Array 
+		String[] colores = {"Negro", "Cyan", "Azul", "Verde"};
+		Integer[] numerosPares = {2,4,6,8,10,12};
+		int[] primerosNumeros = {1,2,3,4,5,6,7,8,9,0};
+		
+		//Posicion inicial: (0)
+		
+		System.out.println(colores[2]);
+		System.out.println(numerosPares[3]);
+		System.out.println(primerosNumeros[0]);
+		
+		//nombreArray[posicion] -> Accediendo al elemento del arreglo en esa posicion
+		System.out.println(colores[1]); //Cyan
+		
+		numerosPares[3] = 14; // Reemplazamos la posicion 3
+		System.out.println(numerosPares[3]);
+	
+		
+//		numerosPares[6] = 14;//Error fuera de indice, 
+		//no podemos agregar por posicion si no existe un elemento 
+		
+		
+		
+	}
+	
+	
+
+}

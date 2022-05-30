@@ -1,0 +1,28 @@
+package com.generation.f20220526;
+
+import java.util.ArrayList;
+
+public class ColeccionArrayList {
+
+	public static void main(String[] args) {
+		
+		//ArrayList DINAMICOS
+		//Instancia de clase, definicion de arreglo
+		ArrayList<String> colores = new ArrayList<String>();
+		ArrayList<Integer> numerosPares = new ArrayList<Integer>();
+		
+		//Agregar un elemento a la lista
+		colores.add("Rojo");
+		colores.add("Azul");
+		
+		//Agrega el valor a la posicion (1)
+		//Si existe un elemento en esa posicion, desplaza a las demas a la derecha
+		colores.add(1,"verde");
+		colores.add(1,"verde");
+		
+		
+		//Imprimir el contenido 
+		System.out.println(colores);
+	}
+
+}

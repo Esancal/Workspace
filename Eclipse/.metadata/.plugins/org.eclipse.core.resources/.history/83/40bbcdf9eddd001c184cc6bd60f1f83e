@@ -1,0 +1,37 @@
+package com.generation.f20220527;
+
+public class Auto {
+
+	//Clase es un modelo o prototipo
+	//Objeto, nace a partir de la clase, caracteristica o atributo,
+	//Tiene metodos o funciones.
+	//Algo concreto lo convertimos en abstracto (No tangible)
+	
+	//QUE ES UN ATRIBUTO DE COLABORACION: TOMAR UN OBJETO Y USARLO COMO ATRIBUTO
+	
+	//Atributo
+	//accesador tipo nombreDelAtributo
+	private String color;
+	private String marca;
+	private String modelo;
+	private Double velocidad;
+	
+	//Constructores
+	
+	//Constructor con parametros
+	public Auto(String color, String marca, String modelo, Double velocidad) {
+		super();
+		this.color = color;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.velocidad = velocidad;
+	}
+	
+
+	//Nos permite asignar valores a los atributos
+	
+	
+	//accesadores y mutadores (get y set)
+	//metodos o funciones
+	
+}

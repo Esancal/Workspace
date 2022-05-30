@@ -1,0 +1,49 @@
+package com.generation.f20220526;
+
+public class Funciones {
+
+	public static void main(String[] args) {
+		
+		//Funciones
+		//4 tipos de funciones
+		//2 que retornan
+		//2 no retornan
+		
+		//public: Cualquier otra clase podra llamar a esta funcion
+		//void: No retornan nada, solo ejecuta codigo
+		//nombre_funcion se escribe con minuscula la primera letra
+		
+		saludo();
+		
+		
+	}
+	
+	
+	
+	//accesador tipoDeRetorno nombreFuncion (parametrosARecibir)	
+	public void calculoSumaPares(int numero1, Integer numero2) {
+	}
+	//static nos permite acceder al metodo
+	public static void saludo() {
+		System.out.println("Bienvenido");
+	}
+	
+	//funciones que retornan un tipo de datos
+	public Integer obtenerEdad() {
+		Integer edad = 18;
+		return edad;
+	}
+	
+	public Boolean validarMayorEdad(Integer edad) {
+		if(edad>=18) {
+			System.out.println("Es mayor de edad");
+			return true;
+		}
+		else {
+			System.out.println("Es menor de edad");
+			return false;
+		}
+	}
+	
+	
+}
