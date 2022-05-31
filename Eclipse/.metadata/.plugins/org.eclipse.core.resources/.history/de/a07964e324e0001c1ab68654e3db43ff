@@ -1,0 +1,21 @@
+package com.genetarion.f20220530;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//instancia de una clase
+		//Alumno es objeto, alumno es variable (se puede cambiar de nombre)
+		com.genetarion.f20220530.alumno alumno = new Alumno(); 
+		//con Alumno() Se llama al constructor vacio
+		//Y eso es para asignar valores a nuestros atributos
+		com.genetarion.f20220530.alumno alumno2 = new Alumno("Leonardo", "Utreras", 26, "G1");
+		
+		System.out.println(alumno.getNombre());
+		System.out.println(alumno2.getNombre();
+		
+		
+
+	}
+		
+
+}

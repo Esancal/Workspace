@@ -1,0 +1,44 @@
+package com.genetarion.f20220530;
+
+public class alumno {
+
+	//atributos
+	//atributo representa una caracteristica del objeto que creamos
+	//Private porque solo podemos acceder dentro de la misma clase
+	//Protected podemos acceder no solo de la misma clase, sino de todo el package
+	//Public porque cualquiera puede acceder desde cualquier parte
+	
+	
+	private String nombre;	 //protected o public
+	private String apellido1;
+	private Integer edad;
+	private String curso;
+	
+	//Encapsulamiento (Sirve para proteger)
+	
+	//constructores
+	
+	
+	public alumno() {
+		super();
+	}
+
+
+	public alumno(String nombre, String apellido1, Integer edad, String curso) {
+		super();
+		this.nombre = nombre;
+		this.apellido1 = apellido1;
+		this.edad = edad;
+		this.curso = curso;
+	}
+
+	
+	
+	
+	
+	//get y set
+	//funciones
+	
+	
+	
+}

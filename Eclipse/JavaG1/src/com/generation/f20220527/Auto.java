@@ -17,6 +17,7 @@ public class Auto {
 	private Double velocidad;
 	
 	//Constructores
+	//Click derecho > Source > Constructor using field
 	
 	public Auto() {
 	

@@ -1,0 +1,22 @@
+package com.genetarion.f20220530;
+
+public class alumno {
+
+	
+	private String nombre;
+	private String apellido1;
+	private String apellido2;
+	private String curso;
+	private Integer edad;
+	
+	
+	//atributos
+	private //protected o public
+	//Encapsulamiento (Sirve para proteger)
+	//constructores
+	//get y set
+	//funciones
+	
+	
+	
+}

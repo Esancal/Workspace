@@ -1,0 +1,29 @@
+package com.generation.f20220530;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//instancia de una clase
+		//Alumno es objeto, alumno es variable (se puede cambiar de nombre)
+		Alumno alumno = new Alumno("Esteban", "Castañeda", 22, "G1"); 
+		//con Alumno() Se llama al constructor vacio
+		//Y eso es para asignar valores a nuestros atributos
+		Alumno alumno2 = new Alumno("Katherina", "Orellana", 24, "G1");
+		Alumno alumno3 = new Alumno("Catalina", "Martinez", 25, "G1");
+		Alumno alumno4 = new Alumno("Danko", "Abarca", 25, "G1");
+		Alumno alumno5 = new Alumno("Wladimir", "Rojas", 27, "G1");
+		
+		alumno.setNombre ("Diana");
+		
+		System.out.println(alumno.getNombre());
+		System.out.println(alumno2.getNombre());
+
+		//Setter
+		
+		alumno.setNombre("Israel");
+		System.out.println(alumno.getNombre());
+
+	}
+		
+
+}
