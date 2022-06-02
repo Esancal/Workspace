@@ -22,7 +22,7 @@ public class Administrador extends Empleado{
 		this.norma = norma;
 	}
 	
-	public Integer deuda() {
+	public Integer getDeuda() {
 		return deuda;
 	}
 	public void setDeuda(Integer deuda) {
