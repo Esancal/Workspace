@@ -8,9 +8,21 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.genetarion.f20220530.alumno"/>
     <fullyQualifiedTypeName name="com.generation.f20220530.alumno"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="cl.generation.pan.Main"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="com.generation.f20220531.manager.ClienteManager"/>
+    <fullyQualifiedTypeName name="com.generation.f20220601.modelos.Mascota"/>
+    <fullyQualifiedTypeName name="com.generation.f20220601.modelos.Perro"/>
+    <fullyQualifiedTypeName name="com.generation.f20220601.modelos.Gato"/>
+    <fullyQualifiedTypeName name="com.generation.f20220601.modelos.Michi"/>
+    <fullyQualifiedTypeName name="cl.generation.herencia.Main"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="cl.generation.ejercicioIndividual.modelos.Empleados"/>
+    <fullyQualifiedTypeName name="cl.generation.ejercicioIndividual.modelos.Administrador"/>
+    <fullyQualifiedTypeName name="cl.generation.ejercicioIndividual.modelos.Secretariado"/>
 </qualifiedTypeNameHistroy>
