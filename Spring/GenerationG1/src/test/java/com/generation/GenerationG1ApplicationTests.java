@@ -1,10 +1,10 @@
-package com.generation.estebanc;
+package com.generation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EstebanCApplicationTests {
+class GenerationG1ApplicationTests {
 
 	@Test
 	void contextLoads() {

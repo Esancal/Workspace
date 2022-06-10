@@ -1,13 +1,13 @@
-package com.generation.estebanc;
+package com.generation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EstebanCApplication {
+public class GenerationG1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EstebanCApplication.class, args);
+		SpringApplication.run(GenerationG1Application.class, args);
 	}
 
 }
