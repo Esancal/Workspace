@@ -12,18 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.generation.models.Usuario;
+import com.generation.services.UsuarioService;
 
 @Controller
 @RequestMapping("/registro")
-public class RegistroController {
+public class RegistroController {// http://localhost:8080/registro
 
 
     //Inyeccion de dependencias
     @Autowired
+    UsuarioService usuarioService;
+    
 
 
     // Ruta para desplegar el jsp
-    // http://localhost:8080/registro
     // Desde el controlador enviamos un objeto con atributos, pero vacio "usuario"
     // de tipo "Usuario"
     @RequestMapping("")
@@ -53,9 +55,10 @@ public class RegistroController {
             model.addAttribute("msgError", "Datos mal ingresados");
             return "registro.jsp";
         }
-        System.out.println(usuario.getNombre()+ " " + usuario.getApellido()+ " " + usuario.getEdad()+ "" + usuario.getPassword());
+        System.out.println(usuario.getNombre()+ " " + usuario.getApellido()+ " " + usuario.getEdad()+ " " + usuario.getPassword());
 
         //Enviar el objeto al servicio
+        usuarioService.saveUsuario(usuario);
         
         return "index.jsp"; // La pagina que desplegamos
     }
