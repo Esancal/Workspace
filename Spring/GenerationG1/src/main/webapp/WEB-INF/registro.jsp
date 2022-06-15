@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
             <!DOCTYPE html>
@@ -27,7 +27,7 @@
                         <form:input type="number" path="edad" />
                         <br>
                         <form:label path="password">Contraseña</form:label>
-                        <form:input path="password" />
+                        <form:input type="password" path="password" />
                         <br>
                         <input type="submit" value="Registrar">
                     </form:form>

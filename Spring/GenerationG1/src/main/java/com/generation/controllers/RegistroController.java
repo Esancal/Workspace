@@ -2,6 +2,7 @@ package com.generation.controllers;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,6 +16,11 @@ import com.generation.models.Usuario;
 @Controller
 @RequestMapping("/registro")
 public class RegistroController {
+
+
+    //Inyeccion de dependencias
+    @Autowired
+
 
     // Ruta para desplegar el jsp
     // http://localhost:8080/registro
@@ -48,6 +54,9 @@ public class RegistroController {
             return "registro.jsp";
         }
         System.out.println(usuario.getNombre()+ " " + usuario.getApellido()+ " " + usuario.getEdad()+ "" + usuario.getPassword());
+
+        //Enviar el objeto al servicio
+        
         return "index.jsp"; // La pagina que desplegamos
     }
 
