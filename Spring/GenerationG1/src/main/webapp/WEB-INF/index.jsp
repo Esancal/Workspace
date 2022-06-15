@@ -14,14 +14,14 @@
 
         <body>
             <h1>Hola
-                <c:out value="${nombres}"></c:out>
-                <c:out value="{apellidos}"></c:out>
+                <c:out value="${nombre}"></c:out>
+                <c:out value="${apellido}"></c:out>
                 <p>
                     <c:out value="${edad}"></c:out>
                 </p>
                 <br>
                 <p>
-                    <c:out value="Nombre ${usuario.nombres} ${usuario.apellidos} ${usuario.edad}"></c:out>
+                    <c:out value=" ${usuario.nombre} ${usuario.apellido} ${usuario.edad}"></c:out>
                 </p>
             </h1>
         </body>

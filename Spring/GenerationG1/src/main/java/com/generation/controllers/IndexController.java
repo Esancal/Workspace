@@ -9,16 +9,17 @@ import com.generation.models.Usuario;
 @Controller // Esto establece que es un controlador
 public class IndexController {
 
-    // http://localhost:8080/
+    // http://localhost:8080/   
 
     @RequestMapping("/") // Anotacion para capturar las rutas
     public String index(Model model) {
         model.addAttribute("apellidos", "Castañeda Alfaro");
         model.addAttribute("nombres", "Esteban Andres");
         model.addAttribute("edad", 22);
+        model.addAttribute("password","0000");
 
         // Instancia de usuario
-        Usuario usuario = new Usuario("Donato", "Loren", 12);
+        Usuario usuario = new Usuario("Donato", "Loren", 12, "0000");
 
         model.addAttribute("usuario", usuario);
 

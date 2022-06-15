@@ -1,38 +1,86 @@
 package com.generation.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "usuarios")
+
 public class Usuario {
+    // Atributos
+    // Id y GeneratedValue son la PrimaryKey
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        private String nombres;
-        private String apellidos;
-        private Integer edad;
+    @Size(min=3, max=20)
+    private String nombre;
 
-        public Usuario() {
-        }
+    @Size(min=3, max=20)
+    private String apellido;
 
-        public Usuario(String nombres, String apellidos, Integer edad) {
-            this.nombres = nombres;
-            this.apellidos = apellidos;
-            this.edad = edad;
-        }
+    private Integer edad;
+    
+    @NotNull()
+    @Size(min = 6, max = 8)
+    private String password;
 
-        public String getNombres() {
-            return nombres;
-        }
-        public void setNombres(String nombres) {
-            this.nombres = nombres;
-        }
-        public String getApellidos() {
-            return apellidos;
-        }
-        public void setApellidos(String apellidos) {
-            this.apellidos = apellidos;
-        }
-        public Integer getEdad() {
-            return edad;
-        }
-        public void setEdad(Integer edad) {
-            this.edad = edad;
-        }
+    public Usuario() {
+        super();
+    }
 
-        
+    public Usuario(String nombre, String apellido, Integer edad, String password) {
+        super();
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.password = password;
+    }
+
+    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
+    }
+
 }

@@ -1,33 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-        <!DOCTYPE html>
-        <html>
 
-        <head>
-            <meta charset="UTF-8">
-            <title>Registro</title>
-        </head>
+            <!DOCTYPE html>
+            <html>
 
-        <body>
-            <div>
-                <!-- Pasar informacion desde la vista a una url (action) -->
-                <!-- method "get" es por default, los parametros se ven en la ruta-->
-                <!-- method "post" los parametros no se ven, van ocultos-->
-                <form action="" method="post">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" id="nombre" name="nombre">
-                    <br>
-                    <label for="apellido">Apellido: </label>
-                    <input type="text" id="apellido" name="apellido">
-                    <br>
-                    <label for="edad">Edad: </label>
-                    <input type="number" id="edad" name="edad">
-                    <br>
-                    <input type="submit" value="Registrar">
-                    <input type="button" value="Enviar">
-                </form>
-            </div>
-        </body>
+            <head>
+                <meta charset="UTF-8">
+                <title>Registro</title>
+            </head>
 
-        </html>
+            <body>
+                <div>
+                    <c:if test="${msgError != null}">
+                        <c:out value="${msgError}"></c:out>
+                    </c:if>
+                    <form:form action="/registro/usuario" method="post" modelAttribute="usuario">
+                        <form:label path="nombre">Nombre</form:label>
+                        <form:input path="nombre" />
+                        <br>
+                        <form:label path="apellido">Apellido</form:label>
+                        <form:input path="apellido" />
+                        <br>
+                        <form:label path="edad">Edad</form:label>
+                        <form:input type="number" path="edad" />
+                        <br>
+                        <form:label path="password">Contraseña</form:label>
+                        <form:input path="password" />
+                        <br>
+                        <input type="submit" value="Registrar">
+                    </form:form>
+                </div>
+            </body>
+
+            </html>
