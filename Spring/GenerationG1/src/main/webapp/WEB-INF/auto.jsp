@@ -20,11 +20,11 @@
                         <c:out value="${msgError}"></c:out>
                     </c:if>
                     <form:form action="/auto/registro" method="post" modelAttribute="auto">
-                        <form:label path="modelo" class="form-label">Modelo</form:label>
-                        <form:input path="modelo" class="form-control" />
-                        <br>
                         <form:label path="marca" class="form-label">Marca</form:label>
                         <form:input path="marca" class="form-control" />
+                        <br>
+                        <form:label path="modelo" class="form-label">Modelo</form:label>
+                        <form:input path="modelo" class="form-control" />
                         <br>
                         <form:label path="velocidadMax" class="form-label">Velocidad Maxima</form:label>
                         <form:input type="number" path="velocidadMax" />
