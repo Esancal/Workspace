@@ -12,6 +12,17 @@
                     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
                     crossorigin="anonymous">
             </head>
+            <style>
+                /* Aqui se crea el contador y se setea a 0*/
+                table {
+                    counter-reset: contador;
+                }
+                /*Aqui se suma 1 para cada celda */
+                .counterCell:before {
+                    content: counter(contador);
+                    counter-increment: contador; /* se puede hacer contador+X para aumentar el incrementado*/
+                }
+            </style>
 
             <body>
                 <div class="container">
@@ -22,6 +33,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">ID</th>
                                 <th scope="col">Marca</th>
                                 <th scope="col">Modelo</th>
                                 <th scope="col">Color</th>
@@ -32,13 +44,16 @@
                         <tbody>
                             <c:forEach var="auto" items="${listaAutos}">
                                 <tr>
-                                    <th scope="row">${auto.id}</th>
+                                    <td class="counterCell"></td>
+                                    <td>${auto.id}</td>
                                     <td>${auto.marca}</td>
                                     <td>${auto.modelo}</td>
                                     <td>${auto.color}</td>
                                     <td>${auto.velocidadMax}</td>
-                                    <td><a class="btn btn-warning" href="/auto/editar/${auto.id}" role="button">Editar</a></td>
-                                    <td><a class="btn btn-danger" href="/auto/eliminar/${auto.id}" role="button">Eliminar</a></td>
+                                    <td><a class="btn btn-warning" href="/auto/editar/${auto.id}"
+                                            role="button">Editar</a></td>
+                                    <td><a class="btn btn-danger" href="/auto/eliminar/${auto.id}"
+                                            role="button">Eliminar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
