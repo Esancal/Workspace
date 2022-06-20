@@ -26,6 +26,7 @@
                                 <th scope="col">Modelo</th>
                                 <th scope="col">Color</th>
                                 <th scope="col">Velocidad Maxima</th>
+                                <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,6 +37,8 @@
                                     <td>${auto.modelo}</td>
                                     <td>${auto.color}</td>
                                     <td>${auto.velocidadMax}</td>
+                                    <td><a class="btn btn-warning" href="/auto/editar/${auto.id}" role="button">Editar</a></td>
+                                    <td><a class="btn btn-danger" href="/auto/eliminar/${auto.id}" role="button">Eliminar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
