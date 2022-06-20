@@ -18,12 +18,9 @@ import com.generation.services.UsuarioService;
 @RequestMapping("/registro")
 public class RegistroController {// http://localhost:8080/registro
 
-
-    //Inyeccion de dependencias
+    // Inyeccion de dependencias
     @Autowired
     UsuarioService usuarioService;
-    
-
 
     // Ruta para desplegar el jsp
     // Desde el controlador enviamos un objeto con atributos, pero vacio "usuario"
@@ -48,18 +45,19 @@ public class RegistroController {// http://localhost:8080/registro
 
     // Y aqui capturamos el objeto con los atributos llenos
     @PostMapping("/usuario")
-    public String guardarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, 
-    BindingResult resultado, Model model) {
-        //El bindingResult va seguido del Valid, este valida lo que esta en 
-        if(resultado.hasErrors()){ //Capturando si existe un error en el ingreso de datos desde el jsp
+    public String guardarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario,
+            BindingResult resultado, Model model) {
+        // El bindingResult va seguido del Valid, este valida lo que esta en
+        if (resultado.hasErrors()) { // Capturando si existe un error en el ingreso de datos desde el jsp
             model.addAttribute("msgError", "Datos mal ingresados");
             return "registro.jsp";
         }
-        System.out.println(usuario.getNombre()+ " " + usuario.getApellido()+ " " + usuario.getEdad()+ " " + usuario.getPassword());
+        System.out.println(usuario.getNombre() + " " + usuario.getApellido() + " " + usuario.getEdad() + " "
+                + usuario.getPassword());
 
-        //Enviar el objeto al servicio
+        // Enviar el objeto al servicio
         usuarioService.saveUsuario(usuario);
-        
+
         return "index.jsp"; // La pagina que desplegamos
     }
 
