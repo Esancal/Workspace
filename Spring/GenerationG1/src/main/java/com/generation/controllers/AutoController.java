@@ -20,7 +20,7 @@ import com.generation.services.AutoService;
 @RequestMapping("/auto")
 public class AutoController {// http://localhost:8080/auto
 
-    // Imyeccion de depedencias
+    // Inyeccion de depedencias
     @Autowired
     AutoService autoService;
 
@@ -49,8 +49,9 @@ public class AutoController {// http://localhost:8080/auto
     public String mostrar(Model model){
         // Obtener una lista de autos
         List<Auto> listaAutos = autoService.findAll();
-        model.addAttribute("listaAutos", listaAutos); // Pasamos la lista al jsp
+        model.addAttribute("listaAutos", listaAutos); // Pasamos la lista al jsp        
         return "mostrarAutos.jsp"; // La pagina que desplegamos
+
     }
 
     //localhost:8080/auto/editar/{id}
@@ -88,6 +89,13 @@ public class AutoController {// http://localhost:8080/auto
 
             return "redirect:/auto/mostrar";
         }
+    }
+
+    @RequestMapping("/eliminar/{id}")
+    public String eliminarAuto(@PathVariable("id") Long id){
+
+        autoService.eliminarPorId(id);
+        return "redirect:/auto/mostrar";
     }
 
 }
