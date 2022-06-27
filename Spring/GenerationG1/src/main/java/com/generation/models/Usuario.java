@@ -1,9 +1,17 @@
 package com.generation.models;
 
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -18,17 +26,25 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min=3, max=20)
+    @Size(min = 3, max = 20)
     private String nombre;
 
-    @Size(min=3, max=20)
+    @Size(min = 3, max = 20)
     private String apellido;
 
     private Integer edad;
-    
+
     @NotNull()
     @Size(min = 6, max = 8)
     private String password;
+
+    @Column(updatable = false) // Nos indica que esta columna no se puede actualizar por el sismtea
+    private Date createdAt;
+    private Date updatedAt;
+
+    // OneToOne
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Licencia licencia;
 
     public Usuario() {
         super();
@@ -42,7 +58,6 @@ public class Usuario {
         this.password = password;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -83,4 +98,21 @@ public class Usuario {
         this.edad = edad;
     }
 
+    public Licencia getLicencia() {
+        return licencia;
+    }
+
+    public void setLicencia(Licencia licencia) {
+        this.licencia = licencia;
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = new Date();
+    }
 }

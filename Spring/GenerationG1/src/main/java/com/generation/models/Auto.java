@@ -1,9 +1,14 @@
 package com.generation.models;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -32,6 +37,10 @@ public class Auto {
 
     @NotNull()
     private Integer velocidadMax;
+
+    @Column(updatable = false) // Nos indica que esta columna no se puede actualizar por el sistema
+    private Date createdAt;
+    private Date updatedAt;
 
     public Auto() {
         super();
@@ -83,6 +92,17 @@ public class Auto {
 
     public void setVelocidadMax(Integer velocidadMax) {
         this.velocidadMax = velocidadMax;
+    }
+
+    // Insertara en el atributo la fecha antedes de insertar a base de datos
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = new Date();
     }
 
 }

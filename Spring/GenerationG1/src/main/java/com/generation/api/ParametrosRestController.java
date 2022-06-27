@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api") //Mapping = Rutas // param = Parametros
+@RequestMapping("/api2") //Mapping = Rutas // param = Parametros
 public class ParametrosRestController{
 
     //localhost:8080/api?fecha=20220613
