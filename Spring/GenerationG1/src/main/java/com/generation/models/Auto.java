@@ -1,12 +1,17 @@
 package com.generation.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -38,6 +43,18 @@ public class Auto {
     @NotNull()
     private Integer velocidadMax;
 
+    private Float valor;
+
+    // ManyToMany AutosVentas
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name="autos_ventas", // nombre tabla relacional
+        joinColumns= @JoinColumn(name="auto_id"), // desde la entidad actual
+        inverseJoinColumns= @JoinColumn(name="compra_venta_id") // La otra entidad o tabla
+    )
+    private List<CompraVenta> comprasVentas;
+
+
     @Column(updatable = false) // Nos indica que esta columna no se puede actualizar por el sistema
     private Date createdAt;
     private Date updatedAt;
@@ -46,12 +63,13 @@ public class Auto {
         super();
     }
 
-    public Auto(Long id, String modelo, String marca, String color, Integer velocidadMax) {
+    public Auto(Long id, String modelo, String marca, String color, Integer velocidadMax, Float valor) {
         this.id = id;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.velocidadMax = velocidadMax;
+        this.valor = valor;
     }
 
     public Long getId() {
@@ -92,6 +110,14 @@ public class Auto {
 
     public void setVelocidadMax(Integer velocidadMax) {
         this.velocidadMax = velocidadMax;
+    }
+
+    public Float getValor() {
+        return valor;
+    }
+
+    public void setValor(Float valor) {
+        this.valor = valor;
     }
 
     // Insertara en el atributo la fecha antedes de insertar a base de datos

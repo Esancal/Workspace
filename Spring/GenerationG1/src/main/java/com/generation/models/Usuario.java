@@ -1,6 +1,7 @@
 package com.generation.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +10,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
@@ -45,6 +49,15 @@ public class Usuario {
     // OneToOne
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Licencia licencia;
+
+    // ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
+    @JoinTable(
+        name="roles_usuarios", // nombre tabla relacional
+        joinColumns= @JoinColumn(name="usuario_id"), // desde la entidad actual
+        inverseJoinColumns= @JoinColumn(name="rol_id") // La otra entidad o tabla
+    )
+    private List<Rol> roles;
 
     public Usuario() {
         super();
