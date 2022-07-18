@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.generation.models.Auto;
 import com.generation.services.AutoService;
@@ -97,5 +99,39 @@ public class AutoController {// http://localhost:8080/auto
         autoService.eliminarPorId(id);
         return "redirect:/auto/mostrar";
     }
+
+    @PostMapping("/buscar/marca")
+    public String buscar(@RequestParam(value="marca") String marca, Model model){
+        if(marca.equals("")){
+            return "redirect:/auto/mostrar";
+        }
+        List<Auto> listaAutos = autoService.buscarMarca(marca);
+        model.addAttribute("listaAutos", listaAutos);
+        return "mostrarAutos.jsp";
+    }
+
+    @PostMapping("/buscar/color")
+    public String buscarColor(@RequestParam(value="color") String color, Model model){
+        if(color.equals("")){
+            return "redirect:/auto/mostrar";
+        }
+        List<Auto> listaAutos = autoService.buscarColor(color);
+        model.addAttribute("listaAutos", listaAutos);
+        return "mostrarAutos.jsp";
+    }
+
+    @RequestMapping("/pagina/{numeroPagina}")
+    public String paginarAutos(@PathVariable("numeroPagina") int numeroPagina, Model model){
+
+        //Los iterables siempre empiezan con el indice 0
+        Page<Auto> listaAutos = autoService.paginarAutos(numeroPagina-1); 
+        // Se le resta 1 porque en la pagina se vera con la pagina 1, por lo tanto en la paginacion sera 0
+        model.addAttribute("autosCapturados", listaAutos);
+        // getTotalPages = total_elementos / LOTE;
+        model.addAttribute("totalPaginas", listaAutos.getTotalPages());
+		
+		return "autosPaginados.jsp";
+    }
+
 
 }

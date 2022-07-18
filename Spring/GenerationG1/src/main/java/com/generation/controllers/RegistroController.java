@@ -52,13 +52,47 @@ public class RegistroController {// http://localhost:8080/registro
             model.addAttribute("msgError", "Datos mal ingresados");
             return "registro.jsp";
         }
-        System.out.println(usuario.getNombre() + " " + usuario.getApellido() + " " + usuario.getEdad() + " "
-                + usuario.getPassword());
 
         // Enviar el objeto al servicio
-        usuarioService.saveUsuario(usuario);
+        boolean usuarioCreado = usuarioService.saveUsuario(usuario);
 
-        return "index.jsp"; // La pagina que desplegamos
+        if (usuarioCreado) {
+            model.addAttribute("msgError", "El email ya esta registrado");
+            return "registro.jsp";
+        } else {
+            return "login.jsp"; // La pagina que desplegamos
+        }
     }
+
+    @PostMapping("/usuario/ingreso")
+    public String login(@Valid @RequestParam(value = "email") String email,
+            @RequestParam(value = "password") String password, Model model) {
+        // validaciones (?)
+        // SIEMPRE VALIDAR SI EL PARAMETRO NO ES NULO O VACIO
+        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
+            model.addAttribute("msgError", "Todos los campos son obligatorios");
+            return "registro.jsp";
+        }
+
+        boolean usuarioValidado = usuarioService.validarUsuario(email, password);
+
+        // Si es True indica que hay un error en el ingreso
+        if(usuarioValidado){
+            model.addAttribute("msgError", "Error en el ingreso");
+            return "login.jsp";
+        }// Si es False indica que no hay errores para ingresar
+        else{
+            return "home.jsp";
+        }
+
+        // service
+        // Verificar si la password es la misma que la de la BBDD desencriptada
+        // Si el correo existe en la bbdd
+    }
+
+    @RequestMapping("/usuario/login")
+	public String login() {
+		return "login.jsp";
+	}
 
 }

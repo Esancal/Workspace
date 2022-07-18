@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/var") // localhost:8080var -> path por default
+@RequestMapping("/var") // localhost:8080/var -> path por default
 public class PathVariableRestController {
     //Capturar variables desde la ruta o path
 

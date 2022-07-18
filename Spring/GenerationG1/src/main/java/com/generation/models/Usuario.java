@@ -17,6 +17,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -39,8 +40,12 @@ public class Usuario {
     private Integer edad;
 
     @NotNull()
-    @Size(min = 6, max = 8)
     private String password;
+
+    @Transient // No se crea en la tabla de base de datos
+    private String passwordConfirmacion;
+
+    private String email;
 
     @Column(updatable = false) // Nos indica que esta columna no se puede actualizar por el sismtea
     private Date createdAt;
@@ -51,11 +56,10 @@ public class Usuario {
     private Licencia licencia;
 
     // ManyToMany
-    @ManyToMany(fetch=FetchType.EAGER)
-    @JoinTable(
-        name="roles_usuarios", // nombre tabla relacional
-        joinColumns= @JoinColumn(name="usuario_id"), // desde la entidad actual
-        inverseJoinColumns= @JoinColumn(name="rol_id") // La otra entidad o tabla
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "roles_usuarios", // nombre tabla relacional
+            joinColumns = @JoinColumn(name = "usuario_id"), // desde la entidad actual
+            inverseJoinColumns = @JoinColumn(name = "rol_id") // La otra entidad o tabla
     )
     private List<Rol> roles;
 
@@ -117,6 +121,22 @@ public class Usuario {
 
     public void setLicencia(Licencia licencia) {
         this.licencia = licencia;
+    }
+
+    public String getPasswordConfirmacion() {
+        return passwordConfirmacion;
+    }
+
+    public void setPasswordConfirmacion(String passwordConfirmacion) {
+        this.passwordConfirmacion = passwordConfirmacion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @PrePersist

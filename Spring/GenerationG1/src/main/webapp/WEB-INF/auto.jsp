@@ -32,11 +32,10 @@
                         <form:label path="color" class="form-label">Color</form:label>
                         <form:input path="color" class="form-control" />
                         <br>
-                        <input type="submit" value="Registrar">
-                        <button type="submit" class="btn btn-primary">Registrar</button>
                         <button type="submit" class="btn btn-outline-primary">Registrar</button>
                     </form:form>
                 </div>
+                <a href="/auto/mostrar" class="btn btn-primary">Mostrar Autos</a>
             </body>
 
             </html>

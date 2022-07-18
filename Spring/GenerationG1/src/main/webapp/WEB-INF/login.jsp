@@ -8,7 +8,7 @@
 
             <head>
                 <meta charset="UTF-8">
-                <title>Registro</title>
+                <title>Login</title>
             </head>
 
             <body>
@@ -16,15 +16,7 @@
                     <c:if test="${msgError != null}">
                         <c:out value="${msgError}"></c:out>
                     </c:if>
-                    <form:form action="/registro/usuario" method="post" modelAttribute="usuario">
-                        <form:label path="nombre">Nombre</form:label>
-                        <form:input path="nombre" />
-                        <br>
-                        <form:label path="apellido">Apellido</form:label>
-                        <form:input path="apellido" />
-                        <br>
-                        <form:label path="edad">Edad</form:label>
-                        <form:input type="number" path="edad" />
+                    <form:form action="/registro/usuario/ingreso" method="post">
                         <br>
                         <form:label path="email">email</form:label>
                         <form:input type="email" path="email" />
@@ -32,10 +24,7 @@
                         <form:label path="password">Password</form:label>
                         <form:input type="password" path="password" />
                         <br>
-                        <form:label path="passwordConfirmacion">Confirmar Password</form:label>
-                        <form:input type="password" path="passwordConfirmacion"/>
-                        <br>
-                        <input type="submit" value="Registrar">
+                        <input type="submit" value="Ingresar">
                     </form:form>
                 </div>
             </body>

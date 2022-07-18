@@ -17,10 +17,12 @@
                 table {
                     counter-reset: contador;
                 }
+
                 /*Aqui se suma 1 para cada celda */
                 .counterCell:before {
                     content: counter(contador);
-                    counter-increment: contador; /* se puede hacer contador+X para aumentar el incrementado*/
+                    counter-increment: contador;
+                    /* se puede hacer contador+X para aumentar el incrementado*/
                 }
             </style>
 
@@ -42,7 +44,10 @@
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                     <br>
-                    <a href="/auto" class="btn btn-primary">Crear auto</a>
+                    <!-- paginacion -->
+                    <c:forEach var="numeroPagina" begin="1" end="${totalPaginas}" >
+                        <a href="/auto/pagina/${numeroPagina}">${numeroPagina}</a>
+                    </c:forEach>
                     <br>
                     <table class="table">
                         <thead>
@@ -57,7 +62,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="auto" items="${listaAutos}">
+                            <c:forEach var="auto" items="${autosCapturados.content}">
                                 <tr>
                                     <td class="counterCell"></td>
                                     <td>${auto.id}</td>
