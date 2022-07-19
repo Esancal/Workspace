@@ -32,10 +32,10 @@ public class Auto {
     private Long id;
 
     @NotNull()
-    private String modelo;
+    private String marca;
 
     @NotNull()
-    private String marca;
+    private String modelo;
 
     @NotNull()
     private String color;
