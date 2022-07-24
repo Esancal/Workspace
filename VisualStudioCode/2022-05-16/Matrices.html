@@ -2,77 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrices</title>
-    <script>
-        //Matrices, Array o arreglos
-        //Conjunto de datos, ordenados segun su ingreso, separados por coma [,]
-        //La primera posicion es cero [0]
-        var matriz = [1, 2, 3, "a", "e", "i", false, true];
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Matrices</title>
+	<script>
+		//Matrices, Array o arreglos
+		//Conjunto de datos, ordenados segun su ingreso, separados por coma [,]
+		//La primera posicion es cero [0]
+		var matriz = [1, 2, 3, "a", "e", "i", false, true];
 
-        console.log(matriz);
-        console.log(matriz.length); //Longitud, tamaño o cantidad de elementos
+		console.log(matriz);
+		console.log(matriz.length); //Longitud, tamaño o cantidad de elementos
 
-        console.log(matriz[3]); //Imprime "a"
-        console.log(matriz[6]); //Imprime "false"
-        console.log(matriz[0] + " " + matriz[1]); //Imprime el concatenado del contenido
-        console.log(matriz[-1]); //Impreime undefined, no existe el indice
+		console.log(matriz[3]); //Imprime "a"
+		console.log(matriz[6]); //Imprime "false"
+		console.log(matriz[0] + " " + matriz[1]); //Imprime el concatenado del contenido
+		console.log(matriz[-1]); //Impreime undefined, no existe el indice
 
-        //Si el elemento existe lo reemplaza, sino existe lo crea
+		//Si el elemento existe lo reemplaza, sino existe lo crea
 
-        matriz[4] = 5; //Sobreescribir o Reemplazamos el elemento posicionado en el 4 por un 5
-        console.log(matriz);
+		matriz[4] = 5; //Sobreescribir o Reemplazamos el elemento posicionado en el 4 por un 5
+		console.log(matriz);
 
-        matriz[12] = "o"; //Añade "o" al lugar 12, los lugares intermedios que no tenian valores, siguen sin valores
-        console.log(matriz); //Tamaño total 13, ya que hay espacios vacios se cuentan de igual manera
+		matriz[12] = "o"; //Añade "o" al lugar 12, los lugares intermedios que no tenian valores, siguen sin valores
+		console.log(matriz); //Tamaño total 13, ya que hay espacios vacios se cuentan de igual manera
 
-        //matriz.lenght - 1, acceder al ultimo elemento
-        console.log(matriz[matriz.length - 1]);
+		//matriz.lenght - 1, acceder al ultimo elemento
+		console.log(matriz[matriz.length - 1]);
 
-        console.clear(); //Limpiar la consola
+		console.clear(); //Limpiar la consola
 
-        //matriz vacia
-        var numeros = [];
-        //agregar elementos a la matriz
-        numeros[0] = 2;
-        numeros.push(4); // Agrega el elemento al final de la matriz
-        numeros.push(5);
-        numeros.push(23);
-        numeros.push(12);
-        numeros.push(15);
+		//matriz vacia
+		var numeros = [];
+		//agregar elementos a la matriz
+		numeros[0] = 2;
+		numeros.push(4); // Agrega el elemento al final de la matriz
+		numeros.push(5);
+		numeros.push(23);
+		numeros.push(12);
+		numeros.push(15);
 
-        //eliminar el ultimo elemento, pop() sin parametros
-        var ultimo = numeros.pop();
-
-
-        var numerosEliminados = [];
-        numerosEliminados.push(ultimo);
-
-        //Agrega un elemento a la posicion cero
-        numeros.unshift(12);
-
-        //Eliminamos el elemento en la posicion cero, NO requiere valor
-        numeros.shift();
-
-        //Retorna la posicion del primer elemento que encuentre
-        var posicion = numeros.indexOf(4);
-        console.log("Posicion del 4 en el arreglo es:", posicion);
-        // Si no lo encuentra retorna el -1
-
-        //Elimina a partir de la posicion del primer parametro la cantidad de elementos del segundo parametro
-        numeros.splice(2, 1); //Elimina 1 elemento a partir de la posicion 2
-        //splice(posicion, cantidad);
-
-        //Crear una matriz a partir de otra matriz
-        var nuevaMatriz = numeros.slice();
+		//eliminar el ultimo elemento, pop() sin parametros
+		var ultimo = numeros.pop();
 
 
-        for (var index = 0; index < nuevaMatriz.length; index++) {
+		var numerosEliminados = [];
+		numerosEliminados.push(ultimo);
 
-        }
-    </script>
+		//Agrega un elemento a la posicion cero
+		numeros.unshift(12);
+
+		//Eliminamos el elemento en la posicion cero, NO requiere valor
+		numeros.shift();
+
+		//Retorna la posicion del primer elemento que encuentre
+		var posicion = numeros.indexOf(4);
+		console.log("Posicion del 4 en el arreglo es:", posicion);
+		// Si no lo encuentra retorna el -1
+
+		//Elimina a partir de la posicion del primer parametro la cantidad de elementos del segundo parametro
+		numeros.splice(2, 1); //Elimina 1 elemento a partir de la posicion 2
+		//splice(posicion, cantidad);
+
+		//Crear una matriz a partir de otra matriz
+		var nuevaMatriz = numeros.slice();
+
+
+		for (var index = 0; index < nuevaMatriz.length; index++) {
+
+		}
+	</script>
 </head>
 
 <body>
